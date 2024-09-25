@@ -12,6 +12,7 @@ export type BaseComponentType<T> = {
 
 export type HeaderProps = {
   title: string
+  size: 'sm' | 'md' | 'lg' | 'xl'
 }
 
 export type ImageProps = {

@@ -3,7 +3,8 @@
     {
       "type": "header",
       "props": {
-        "title": "Welcome to Dynamic Component Rendering"
+        "title": "Welcome to Dynamic Component Rendering",
+        "size": "xl"
       }
     },
     {
