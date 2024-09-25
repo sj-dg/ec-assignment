@@ -5,5 +5,7 @@ defineProps<ImageProps>()
 </script>
 
 <template>
-  <img :src="src" />
+  <figure class="grid place-items-center">
+    <img :src="src" />
+  </figure>
 </template>

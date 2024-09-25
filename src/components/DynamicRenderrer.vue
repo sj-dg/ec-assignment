@@ -20,12 +20,13 @@ onMounted(async () => {
 
 <template>
   <h2 v-if="fetchingData">Loading...</h2>
-  <template v-else>
-    <component
+  <ul class="flex flex-col gap-2" v-else>
+    <li
+      class="border border-gray-200 p-2 rounded-md"
       v-for="(comp, index) in componentsData"
       :key="index"
-      :is="comp.type"
-      v-bind="comp.props"
-    />
-  </template>
+    >
+      <component :is="comp.type" v-bind="comp.props" />
+    </li>
+  </ul>
 </template>

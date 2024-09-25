@@ -5,5 +5,5 @@ defineProps<HeaderProps>()
 </script>
 
 <template>
-  <h3>{{ title }}</h3>
+  <h3 class="p-2 text-xl">{{ title }}</h3>
 </template>

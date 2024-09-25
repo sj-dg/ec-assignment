@@ -5,5 +5,5 @@ defineProps<ButtonProps>()
 </script>
 
 <template>
-  <button>{{ label }}</button>
+  <button class="bg-fuchsia-300 font-semibold px-4 py-2 rounded-sm">{{ label }}</button>
 </template>
