@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="wrapper">
         <nav>
           <RouterLink to="/" class="hover:opacity-60">Example 1</RouterLink>
-          <RouterLink to="/about" class="ml-4 hover:opacity-60">Example 2</RouterLink>
+          <RouterLink to="/example-2" class="ml-4 hover:opacity-60">Example 2</RouterLink>
         </nav>
       </div>
     </header>

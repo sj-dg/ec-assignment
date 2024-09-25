@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "type": "header",
+      "props": {
+        "title": "Welcome to Dynamic Component Rendering"
+      }
+    },
+    {
+      "type": "image",
+      "props": {
+        "src": "https://example.com/image.jpg"
+      }
+    },
+    {
+      "type": "button",
+      "props": {
+        "label": "Click me!"
+      }
+    }
+  ]
+}
