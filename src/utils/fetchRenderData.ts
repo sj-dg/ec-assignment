@@ -6,7 +6,13 @@ type DataResponse = { data: DataItem[] }
 export default async (): Promise<DataResponse> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(dataResponse as DataResponse)
+      /**
+       * shuffle data everytime its invoked
+       */
+      const shuffledResponse = {
+        data: dataResponse.data.sort(() => 0.5 - Math.random())
+      }
+      resolve(shuffledResponse as DataResponse)
     }, 2500)
   })
 }
