@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto mt-4">
+  <div class="w-11/12 lg:max-w-3xl mx-auto mt-4">
     <header class="p-4 bg-gray-300 rounded-sm">
       <div class="wrapper">
         <nav>
@@ -13,8 +13,8 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </header>
 
-    <div class="p-4 border border-gray-300 rounded-sm mt-4">
+    <main class="p-4 border border-gray-300 rounded-sm mt-4">
       <RouterView />
-    </div>
+    </main>
   </div>
 </template>
