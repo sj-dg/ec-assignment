@@ -39,11 +39,12 @@
 #### Possible mitigation
 
 - Make sure html sanitization is in place before user generated content is rendered on the screen.
-- Ensuring proper content security policies are in place, so that any 3rd party library OR user injected scripts are unable to execute and prevent access to private tokens
+- Ensuring proper content security policies are in place, so that any 3rd party library OR user injected scripts are unable to execute and prevent access to private tokens.
 
 ### Further improvements
 
-- Create a design system which define atomic components in order to further create complex layouts/UI capabilities
-- Split each complex component into separate chunks (Already took care of this using defineAsyncComponent)
-- Use service-workers to cache per component chunks so that once cached, the perceived performance in subsequent visits is better.
-- Of course, use better skeleton loaders
+- Create a design system which define atomic components in order to further create complex layouts/UI capabilities.
+- Split each complex component into separate chunks (Already took care of this using defineAsyncComponent).
+- Possibly save static asset chunks in CDN, so that users accessing the app see instant results.
+- Use service-workers to cache per component chunks so that once cached, the perceived performance of subsequent visits is better.
+- Of course, use better skeleton loaders.
