@@ -1,64 +1,48 @@
-# expedite-commerce
+## How to run?
 
-This template should help get you started developing with Vue 3 in Vite.
+1. Clone the repo
+2. Using terminal, `cd <address-to-this-repo-on-your-machine>`
+3. Do following,
 
-## Recommended IDE Setup
+   ```sh
+   pnpm install
+   pnpm dev # access at http://localhost:5173
+   ```
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## What could go wrong?
 
-## Type Support for `.vue` Imports in TS
+### Risk 1
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Props mismatch between backend response and component prop structure.
 
-## Customize configuration
+#### Possible mitigation:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Automated test suite that screams failure if a breaking change is made.
+- Versioned components, without breaking any existing features, we could make use of versioning for each data item using which we could render legacy or new component.
+- Error handling (also tracking) at component level which handles it gracefully without breaking other working pieces.
+- Using good defaults for props so that components render (Not highly recommended but it should help in not breaking the entire app)
 
-## Project Setup
+### Risk 2
 
-```sh
-pnpm install
-```
+- Rendering large number of complex components on the page
 
-### Compile and Hot-Reload for Development
+#### Possible mitigation
 
-```sh
-pnpm dev
-```
+- Viewport based component loading and rendering, only fetch, parse and render components when users wants to scroll.
+- Support data virtualisation where code related to components below the fold should not be loaded.
+- In Vue 3.5+ for SSR apps, we could use lazy hydration [see more](https://vuejs.org/guide/components/async.html#lazy-hydration)
 
-### Type-Check, Compile and Minify for Production
+### Risk 3
 
-```sh
-pnpm build
-```
+- Rendering insecure user generated content
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+#### Possible mitigation
 
-```sh
-pnpm test:unit
-```
+- Make sure html sanitization is in place before user generated content is rendered on the screen.
+- Ensuring proper content security policies are in place, so that any 3rd party library OR user injected scripts are unable to execute and prevent access to private tokens
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
+### Further improvements
 
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-pnpm build
-
-# Runs the end-to-end tests
-pnpm test:e2e
-# Runs the tests only on Chromium
-pnpm test:e2e --project=chromium
-# Runs the tests of a specific file
-pnpm test:e2e tests/example.spec.ts
-# Runs the tests in debug mode
-pnpm test:e2e --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+- Create a design system which define atomic components in order to further create complex layouts/UI capabilities
+- Split each complex component into separate chunks (Already took care of this using defineAsyncComponent)
+- Use service-workers to cache per component chunks so that once cached, the perceived performance in subsequent visits is better.
