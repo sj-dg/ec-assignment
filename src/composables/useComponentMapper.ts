@@ -23,7 +23,7 @@ export function useComponentMapper() {
        * defineAsyncComponent will help in code splitting so that if endpoint does not want to render a component
        * code related to that component won't be downloaded
        */
-      type: markRaw(defineAsyncComponent(() => import(componentMap[item.type]))),
+      component: markRaw(defineAsyncComponent(() => import(componentMap[item.type]))),
       props: item.props
     })) as ComponentItem[]
   }

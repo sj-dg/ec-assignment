@@ -6,7 +6,7 @@ export type BaseDataType<T> = {
 }
 
 export type BaseComponentType<T> = {
-  type: Component
+  component: Component
   props: T
 }
 
