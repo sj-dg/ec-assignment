@@ -31,19 +31,31 @@ export type CardProps = {
   content: string
 }
 
+export type ConfirmLogoutProps = {
+  buttonProps: ButtonProps
+  dialogProps: {
+    title: string
+    confirmLabel: string
+    cancelLabel: string
+  }
+}
+
 export type HeaderType = BaseDataType<HeaderProps>
 export type ImageType = BaseDataType<ImageProps>
 export type ButtonType = BaseDataType<ButtonProps>
 export type CardType = BaseDataType<CardProps>
+export type ConfirmLogoutType = BaseDataType<ConfirmLogoutProps>
 
 export type HeaderComponentType = BaseComponentType<HeaderProps>
 export type ImageComponentType = BaseComponentType<ImageProps>
 export type ButtonComponentType = BaseComponentType<ButtonProps>
 export type CardComponentType = BaseComponentType<CardProps>
+export type ConfirmLogoutComponentType = BaseComponentType<ConfirmLogoutProps>
 
-export type DataItem = HeaderType | ImageType | ButtonType | CardType
+export type DataItem = HeaderType | ImageType | ButtonType | CardType | ConfirmLogoutType
 export type ComponentItem =
   | HeaderComponentType
   | ImageComponentType
   | ButtonComponentType
   | CardComponentType
+  | ConfirmLogoutComponentType

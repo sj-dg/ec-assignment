@@ -28,6 +28,20 @@
         "title": "This is card title",
         "content": "<p>This is card description</p>"
       }
+    },
+    {
+      "type": "logout-with-confirm",
+      "props": {
+        "buttonProps": {
+          "label": "Logout",
+          "color": "red"
+        },
+        "dialogProps": {
+          "title": "Do you really want to logout?",
+          "confirmLabel": "Logout",
+          "cancelLabel": "Abort"
+        }
+      }
     }
   ]
 }

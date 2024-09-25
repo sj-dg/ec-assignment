@@ -11,7 +11,8 @@ const componentMap: Record<string, string> = {
   header: '../components/Header.vue',
   image: '../components/Image.vue',
   button: '../components/Button.vue',
-  card: '../components/Card.vue'
+  card: '../components/Card.vue',
+  'logout-with-confirm': '../components/LogoutWithConfirm.vue'
 }
 
 export function useComponentMapper() {
