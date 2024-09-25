@@ -17,6 +17,8 @@ export type HeaderProps = {
 
 export type ImageProps = {
   src: string
+  alt: string
+  rounded: 'none' | 'sm' | 'md' | 'lg' | 'full'
 }
 
 export type ButtonProps = {

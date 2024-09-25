@@ -10,7 +10,9 @@
     {
       "type": "image",
       "props": {
-        "src": "https://picsum.photos/id/1/200/300"
+        "src": "https://picsum.photos/id/1/200/300",
+        "alt": "This is alt text",
+        "rounded": "full"
       }
     },
     {
