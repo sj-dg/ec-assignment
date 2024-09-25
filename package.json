@@ -17,6 +17,7 @@
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
     "dompurify": "^3.1.6",
+    "pinia": "^2.2.2",
     "radix-vue": "^1.9.6",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
