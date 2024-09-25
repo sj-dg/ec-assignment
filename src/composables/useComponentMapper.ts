@@ -10,7 +10,8 @@ import { type DataItem, type ComponentItem } from '@/types'
 const componentMap: Record<string, string> = {
   header: '../components/Header.vue',
   image: '../components/Image.vue',
-  button: '../components/Button.vue'
+  button: '../components/Button.vue',
+  card: '../components/Card.vue'
 }
 
 export function useComponentMapper() {
@@ -23,7 +24,9 @@ export function useComponentMapper() {
        * defineAsyncComponent will help in code splitting so that if endpoint does not want to render a component
        * code related to that component won't be downloaded
        */
-      component: markRaw(defineAsyncComponent(() => import(componentMap[item.type]))),
+      component: markRaw(
+        defineAsyncComponent(() => import(/* @vite-ignore */ componentMap[item.type]))
+      ),
       props: item.props
     })) as ComponentItem[]
   }

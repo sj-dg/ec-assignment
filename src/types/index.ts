@@ -26,13 +26,24 @@ export type ButtonProps = {
   color: 'blue' | 'green' | 'red' | 'yellow'
 }
 
+export type CardProps = {
+  title: string
+  content: string
+}
+
 export type HeaderType = BaseDataType<HeaderProps>
 export type ImageType = BaseDataType<ImageProps>
 export type ButtonType = BaseDataType<ButtonProps>
+export type CardType = BaseDataType<CardProps>
 
 export type HeaderComponentType = BaseComponentType<HeaderProps>
 export type ImageComponentType = BaseComponentType<ImageProps>
 export type ButtonComponentType = BaseComponentType<ButtonProps>
+export type CardComponentType = BaseComponentType<CardProps>
 
-export type DataItem = HeaderType | ImageType | ButtonType
-export type ComponentItem = HeaderComponentType | ImageComponentType | ButtonComponentType
+export type DataItem = HeaderType | ImageType | ButtonType | CardType
+export type ComponentItem =
+  | HeaderComponentType
+  | ImageComponentType
+  | ButtonComponentType
+  | CardComponentType

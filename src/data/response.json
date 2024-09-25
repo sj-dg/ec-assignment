@@ -21,6 +21,13 @@
         "label": "Click me!",
         "color": "red"
       }
+    },
+    {
+      "type": "card",
+      "props": {
+        "title": "This is card title",
+        "content": "<p>This is card description</p>"
+      }
     }
   ]
 }
