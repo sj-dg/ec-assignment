@@ -23,6 +23,7 @@ export type ImageProps = {
 
 export type ButtonProps = {
   label: string
+  color: 'blue' | 'green' | 'red' | 'yellow'
 }
 
 export type HeaderType = BaseDataType<HeaderProps>

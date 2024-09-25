@@ -18,7 +18,8 @@
     {
       "type": "button",
       "props": {
-        "label": "Click me!"
+        "label": "Click me!",
+        "color": "red"
       }
     }
   ]
