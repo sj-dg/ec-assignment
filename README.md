@@ -46,3 +46,4 @@
 - Create a design system which define atomic components in order to further create complex layouts/UI capabilities
 - Split each complex component into separate chunks (Already took care of this using defineAsyncComponent)
 - Use service-workers to cache per component chunks so that once cached, the perceived performance in subsequent visits is better.
+- Of course, use better skeleton loaders
