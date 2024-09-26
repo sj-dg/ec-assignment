@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "type": "header",
+      "props": {
+        "title": "Welcome to Dynamic Component Rendering",
+        "size": "xl"
+      }
+    },
+    {
+      "type": "image",
+      "props": {
+        "src": "https://picsum.photos/id/1/200/300",
+        "alt": "This is alt text",
+        "rounded": "full"
+      }
+    },
+    {
+      "type": "button",
+      "props": {
+        "label": "Click me!",
+        "color": "red"
+      }
+    }
+  ]
+}
