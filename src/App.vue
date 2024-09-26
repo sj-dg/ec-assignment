@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { useUIDataStore } from './stores/useUiDataStore'
+import { useUIDataStore } from './stores/useUIDataStore'
 const uiDataStore = useUIDataStore()
 </script>
 
@@ -10,9 +10,9 @@ const uiDataStore = useUIDataStore()
       <div class="wrapper">
         <nav class="text-center" :class="{ 'pointer-events-none': uiDataStore.fetching }">
           <RouterLink to="/" class="p-2 rounded-lg hover:bg-white">Example 1</RouterLink>
-          <RouterLink to="/example-2" class="p-2 rounded-lg ml-4 hover:bg-white"
-            >Example 2</RouterLink
-          >
+          <RouterLink to="/example-2" class="p-2 rounded-lg ml-4 hover:bg-white">
+            Example 2
+          </RouterLink>
         </nav>
       </div>
     </header>
