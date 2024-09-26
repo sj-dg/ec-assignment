@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useUIDataStore } from '@/stores/useUiDataStore'
+import { useUIDataStore } from '@/stores/useUIDataStore'
 
 const uiDataStore = useUIDataStore()
 
